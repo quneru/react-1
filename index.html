@@ -1,49 +1,14 @@
 <html>
-
-<body>
-  <div id="app"></div>
-  <div id="list"></div>
-  <div id="forlist"></div>
-  <script type="text/javascript">
-      const app = document.getElementById('app');
-      const header = document.createElement('h1');
-      const text = 'うぇるかむ';
-      const headerContent = document.createTextNode(text);
-      header.appendChild(headerContent);
-      app.appendChild(header);
-
-      const list = document.getElementById('list');
-      const ul = document.createElement('ul');
-      const content1 = 'りんご';
-      const content2 = 'ばなな';
-      const content3 = 'いちぼ';
-      const listContent1 = document.createTextNode(content1);
-      const listContent2 = document.createTextNode(content2);
-      const listContent3 = document.createTextNode(content3);
-      const li1 = document.createElement('li');
-      const li2 = document.createElement('li');
-      const li3 = document.createElement('li');
-      li1.appendChild(listContent1);
-      li2.appendChild(listContent2);
-      li3.appendChild(listContent3);
-      ul.appendChild(li1);
-      ul.appendChild(li2);
-      ul.appendChild(li3);
-      list.appendChild(ul);
-
-      const forlist = document.getElementById('forlist');
-      const forul = document.createElement('ul');
-      const contents = ['りんご','ばなな','いちご'];
-      for (let i=0; i < contents.length; i++) {
-        console.log(contents[i]);
-        const content = contents[i];
-        const listcontent = document.createTextNode(content);
-        const li = document.createElement('li');
-        li.appendChild(listcontent);
-        forul.appendChild(li);
-      } 
-      forlist.appendChild(forul);     
-  </script>
-</body>
-
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+      const domNode = document.getElementById('app');
+      const root = ReactDOM.createRoot(domNode);
+      root.render(<h1>Develop. Preview. Ship.</h1>);
+    </script>
+  </body>
 </html>
